@@ -1,14 +1,14 @@
 {
-  "name": "anmol",
+  "name": "jaynish",
   "version": "2.1.0",
-  "description": "A personal card for Anmol Pratap Singh (@anmol098)",
+  "description": "A personal card for Jaynish Buddhdev (@jaynishb)",
   "main": "card.js",
   "bin": {
     "anmol": "./card.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anmol098/npx_card.git"
+    "url": "git+https://github.com/jaynishb/npx_card.git"
   },
   "scripts": {
     "test": "node card.js",
@@ -32,6 +32,6 @@
     "npx card",
     "business card"
   ],
-  "author": "Anmol Singh <hi@anmolsingh.me> (https://anmolsingh.me/)",
+  "author": "Jaynish Buddhdev <bjaynish1@gmail.com> ",
   "license": "ISC"
 }

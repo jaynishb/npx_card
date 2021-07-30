@@ -4,7 +4,7 @@
   "description": "A personal card for Jaynish Buddhdev (@jaynishb)",
   "main": "card.js",
   "bin": {
-    "jaynish": "./card.js"
+    "jaynishb": "./card.js"
   },
   "repository": {
     "type": "git",

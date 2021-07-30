@@ -25,21 +25,21 @@ const questions = [
             {
                 name: `Send me an ${chalk.green.bold("email")}?`,
                 value: () => {
-                    open("mailto:hi@anmolsingh.me");
+                    open("mailto:bjaynish1@gmail.com");
                     console.log("\nDone, see you soon at inbox.\n");
                 }
             },
             {
                 name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
                 value: () => {
-                    // cliSpinners.dots;
+                    
                     const loader = ora({
                         text: ' Downloading Resume',
                         spinner: cliSpinners.material,
                     }).start();
-                    let pipe = request('https://anmolsingh.me/api/resume').pipe(fs.createWriteStream('./anmol-resume.html'));
+                    let pipe = request('https://raw.githubusercontent.com/jaynishb/npx_card/master/resumes/jaynish-buddhdev.html').pipe(fs.createWriteStream('./jaynish-buddhdev.html'));
                     pipe.on("finish", function () {
-                        let downloadPath = path.join(process.cwd(), 'anmol-resume.html')
+                        let downloadPath = path.join(process.cwd(), 'jaynish-buddhdev.html')
                         console.log(`\nResume Downloaded at ${downloadPath} \n`);
                         open(downloadPath)
                         loader.stop();
@@ -57,22 +57,20 @@ const questions = [
 ];
 
 const data = {
-    name: chalk.bold.green("             Anmol Pratap Singh"),
-    handle: chalk.white("@anmol098"),
-    work: `${chalk.white("Software Engineer at")} ${chalk
+    name: chalk.bold.green("             Jaynish Buddhdev"),
+    handle: chalk.white("@jaynishb"),
+    work: `${chalk.white("Full stack developer at")} ${chalk
         .hex("#2b82b2")
-        .bold("ClearTax")}`,
-    twitter: chalk.gray("https://twitter.com/") + chalk.cyan("misteranmol"),
-    github: chalk.gray("https://github.com/") + chalk.green("anmol098"),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("anmol098"),
-    web: chalk.cyan("https://anmolsingh.me"),
-    npx: chalk.red("npx") + " " + chalk.white("anmol"),
+        .bold("Zenjob")}`,
+    twitter: chalk.gray("https://twitter.com/") + chalk.cyan("jaynish_b"),
+    github: chalk.gray("https://github.com/") + chalk.green("jaynishb"),
+    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("jaynish-buddhdev"),
+    npx: chalk.red("npx") + " " + chalk.white("jaynishb"),
 
     labelWork: chalk.white.bold("       Work:"),
     labelTwitter: chalk.white.bold("    Twitter:"),
     labelGitHub: chalk.white.bold("     GitHub:"),
     labelLinkedIn: chalk.white.bold("   LinkedIn:"),
-    labelWeb: chalk.white.bold("        Web:"),
     labelCard: chalk.white.bold("       Card:")
 };
 
@@ -90,7 +88,7 @@ const me = boxen(
         `${data.labelCard}  ${data.npx}`,
         ``,
         `${chalk.italic(
-            "I am currently looking for new opportunities,"
+            "I am currently looking for new remote opportunities,"
         )}`,
         `${chalk.italic("my inbox is always open. Whether you have a")}`,
         `${chalk.italic(

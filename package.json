@@ -1,10 +1,10 @@
 {
-  "name": "jaynish",
-  "version": "2.1.0",
+  "name": "jaynishb",
+  "version": "1.0.0",
   "description": "A personal card for Jaynish Buddhdev (@jaynishb)",
   "main": "card.js",
   "bin": {
-    "anmol": "./card.js"
+    "jaynish": "./card.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "npx card",
     "business card"
   ],
-  "author": "Jaynish Buddhdev <bjaynish1@gmail.com> ",
-  "license": "ISC"
+  "author": "Jaynish Buddhdev <bjaynish1@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/jaynishb/npx_card#readme"
 }

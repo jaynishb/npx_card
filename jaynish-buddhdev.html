@@ -1,0 +1,1346 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Jaynish Buddhdev - Full stack developer</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <style>
+  /********************************************
+*   reset from
+*   http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+* COMMONS
+****************/
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: #0095ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
+}
+
+em {
+  color: #757575;
+}
+
+blockquote {
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#profiles .item {
+  padding: 0;
+}
+
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+#header > div {
+  line-height: 1.5;
+}
+
+#header > div > div {
+  margin-right: 1.2em;
+}
+
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 1rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.npm {
+  color: #cb3837;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after {
+  background: #eb5f51;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.toggle-item {
+  display: none;
+}
+
+.section > section > section {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  cursor: pointer;
+}
+
+/******************
+* HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*   TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+/****************
+*   LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+
+  .toggle-item {
+    transform: translate(-9999px);
+  }
+
+  .toggle-item + label {
+    display: block;
+  }
+
+  .toggle-item:checked + label:after {
+    content: "\f0d7";
+  }
+
+  .toggle-item + label:after {
+    float: left;
+    cursor: pointer;
+    margin-left: -20px;
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    content: "\f0da";
+  }
+
+  .toggle-item ~ .item {
+    height: 0;
+    opacity: 0;
+  }
+
+  .toggle-item:checked ~ .item {
+    height: auto;
+    opacity: 1;
+    transition: all 0.5s linear;
+  }
+
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+
+  .section header .date {
+    padding: 0.2em;
+  }
+
+  .display {
+    display: none;
+  }
+
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+/*@media print {*/
+/*  #resume {*/
+/*    margin: 0.1em;*/
+/*    padding: 0.1em;*/
+/*    -ms-word-wrap: break-word;*/
+/*    word-wrap: break-word;*/
+/*    line-height: 1.25;*/
+/*  }*/
+
+/*  @page {*/
+/*    margin: 1cm 1.4cm;*/
+/*  }*/
+
+/*  .item-count {*/
+/*    display: none;*/
+/*  }*/
+
+/*  .company::before,*/
+/*  .institution::before,*/
+/*  .organization::before,*/
+/*  .awarder::before {*/
+/*    content: "at ";*/
+/*  }*/
+
+/*  .main-summary {*/
+/*    padding: 0;*/
+/*    background: transparent;*/
+/*  }*/
+
+/*  .section {*/
+/*    margin: 0.8rem 0;*/
+/*    padding: 0;*/
+/*  }*/
+
+/*  .section header {*/
+/*    padding-bottom: 0.15rem;*/
+/*  }*/
+
+/*  .section .location {*/
+/*    padding-bottom: 0.15rem;*/
+/*  }*/
+
+/*  .section > section > section {*/
+/*    margin: 0 0 1em 0;*/
+/*  }*/
+
+/*  .section > section > section:last-of-type {*/
+/*    margin: 0;*/
+/*  }*/
+
+/*  .stack-overflow::after {*/
+/*    content: "";*/
+/*  }*/
+
+/*  .fa.social {*/
+/*    color: #828386;*/
+/*  }*/
+
+/*  ul {*/
+/*    margin-top: 0.4em;*/
+/*  }*/
+
+/*  ul,*/
+/*  li {*/
+/*    padding: 0;*/
+/*  }*/
+
+/*  ul.keywords li,*/
+/*  ul.courses li {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-size: 0.8rem;*/
+/*    background: transparent;*/
+/*  }*/
+
+/*  ul.keywords li::after,*/
+/*  ul.courses li::after {*/
+/*    padding: 0 0 0 0.1rem;*/
+/*    content: " |";*/
+/*  }*/
+
+/*  ul.keywords::before,*/
+/*  ul.courses::before {*/
+/*    font-size: 0.8rem;*/
+/*    font-weight: 600;*/
+/*  }*/
+
+/*  #skills .item {*/
+/*    width: calc(100% / 3);*/
+/*    padding: 0;*/
+/*  }*/
+
+/*  .highlights {*/
+/*    margin: 0.5em 0 0 0;*/
+/*  }*/
+
+/*  ul.keywords::before {*/
+/*    content: "Skills acquired: ";*/
+/*  }*/
+
+/*  #skills .keywords::before {*/
+/*    content: none;*/
+/*  }*/
+
+/*  .section p {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*  }*/
+
+/*  ul.courses::before {*/
+/*    content: "Major courses: ";*/
+/*  }*/
+
+/*  ul.keywords li:last-of-type::after,*/
+/*  ul.courses li:last-of-type::after {*/
+/*    content: "";*/
+/*  }*/
+
+/*  .level em {*/
+/*    font-style: normal;*/
+/*    padding: 0.1em 0;*/
+/*  }*/
+
+/*  .level .bar {*/
+/*    display: none;*/
+/*  }*/
+
+/*  #profiles .item {*/
+/*    padding: 0;*/
+/*  }*/
+
+/*  .item.display {*/
+/*    display: block;*/
+/*    opacity: 1 !important;*/
+/*  }*/
+
+/*  .fa-map-marker-alt:before {*/
+/*    padding-left: 0.1em;*/
+/*  }*/
+/*}*/
+
+@media print {
+  body {-webkit-print-color-adjust: exact;}
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+      <header id="header" class="clear">
+        <div>
+          <h1 class="name">Jaynish Buddhdev</h1>
+          <h2 class="label">Full-stack developer</h2>
+        </div>
+    
+        <span class="location">
+          <span class="countryCode">India</span>
+        </span>
+    
+    
+        <div id="contact">
+          <div class="email">
+            <span class="far fa-envelope"></span>
+            <a href="mailto:hi@anmolsingh.me">bjaynish1@gmail.com</a>
+          </div>
+          <div class="phone">
+            <span class="fas fa-mobile-alt"></span>
+            <a href="tel:(+49)-1796117720">(+91)-9033641608</a>
+          </div>
+        </div>
+    
+        <div id="profiles">
+          <div class="item">
+            <div class="username">
+              <span class="fab fa-github github social"></span>
+              <span class="url">
+                <a target="_blank" href="https://github.com/jaynishb">jaynishb</a>
+              </span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="username">
+              <span class="fab fa-linkedin linkedin social"></span>
+              <span class="url">
+                <a target="_blank" href="https://www.linkedin.com/in/jaynish-buddhdev/">jaynish-buddhdev</a>
+              </span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="username">
+              <span class="fab fa-npm npm social"></span>
+              <span>npx jaynishb</span>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+      <section class="section">
+        <section class="main-summary">
+          <div><p>Experienced full stack developer with 7+ years in web development. Proficient in front-end and back-end technologies, creating seamless user experiences and scalable server-side solutions. Expertise in JavaScript, React, Node.js, and database management. Passionate about innovation, agile methodologies, and collaborative problem-solving. Ready to elevate your digital projects.</p></div>
+        </section>
+      </section>
+    
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Skills</h2>
+      </header>
+      <section id="skills">
+        <div class="item">
+          <h3 class="name">
+            Programming Languages
+          </h3>
+           
+          <div class="level advanced">
+            <em>Advance</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>Javascript</li>
+            <li>NodeJs</li>
+            <li>Typescript</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3 class="name">
+            Frontend Technologies
+          </h3>
+           
+          <div class="level advanced">
+            <em>Advance</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>ReactJs</li>
+            <li>VueJs</li>
+            <li>React Native</li>
+            <li>Angular</li>
+            <li>Laravel (php)</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3 class="name">
+            Backend Technologies
+          </h3>
+           
+          <div class="level advanced">
+            <em>Advance</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>NodeJs</li>
+            <li>NestJs</li>
+            <li>Laravel (php)</li>
+          </ul>
+        </div>
+        
+        <div class="item">
+          <h3 class="name">
+            Data Management
+          </h3>
+           
+          <div class="level intermediate">
+            <em>Intermediate</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>Postgres</li>
+            <li>MySql</li>
+            <li>Mongodb</li>
+            <li>Dynamodb</li>
+            <li>Sqlite</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            DevOps
+          </h3>
+           
+          <div class="level intermediate">
+            <em>Intermediate</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>AWS</li>
+            <li>Docker</li>
+            <li>Kafka</li>
+            <li>Route53</li>
+            <li>Nginx</li>
+            <li>Jenkins</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3 class="name">
+            Version Control
+          </h3>
+           
+          <div class="level intermediate">
+            <em>Intermediate</em>
+            <div class="bar"></div>
+          </div>
+          <ul class="keywords">
+            <li>Git</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(4)</span></h2>
+      </header>
+      <section id="work">
+        <section class="work-item">
+    
+            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">Full stack developer</div>
+            <div class="company">Frontrol Technology</div>
+            <div class="date">
+              <span class="startDate">Jan 2023</span>
+              <span class="endDate">- Present</span>
+            </div>
+          </header>
+    
+          <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">Pune,</span>
+            <span class="countryCode">(India)</span>
+          </span>    
+          <ul class="keywords">
+              <li>ReactJs</li>
+              <li>NodeJs</li>
+              <li>Typescript</li>
+              <li>Agile</li>
+              <li>Testcases</li>
+          </ul>  
+          <div class="item" id="work-item">
+            <div class="summary"><p>Frontrol Inc., is creating collaborative project execution and control on a unified platform</p></div>
+            <ul class="highlights">
+                <li><p>Acted as a mostly frontend stack JavaScript engineer</p></li>
+                <li><p>Discuss requirements and own feature modules of Frontrol app </p></li>
+                <li><p>Working with user stories in an agile / scrum environment</p></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section id="work">
+        <section class="work-item">
+    
+            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">Full stack developer</div>
+            <div class="company">Atom Learning</div>
+            <div class="date">
+              <span class="startDate">Nov 2021</span>
+              <span class="endDate">- Jan 2023</span>
+            </div>
+          </header>
+    
+          <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">London,</span>
+            <span class="countryCode">(UK)</span>
+          </span>
+          <span class="website">
+            <a target="_blank" href="https://atomlearning.co.uk/">https://atomlearning.co.uk/</a>
+          </span>     
+          <ul class="keywords">
+              <li>NodeJs</li>
+              <li>ReactJs</li>
+              <li>NestJs</li>
+              <li>Jest</li>
+              <li>Kafka</li>
+              <li>AWS SQS</li>
+              <li>Postgres</li>
+          </ul>  
+          <div class="item" id="work-item">
+            <div class="summary"><p>Atom learning is The all-in-one online learning platform for ages 7–11</p></div>
+            <ul class="highlights">
+                <li><p>Acted as a full stack JavaScript engineer for the post atom growth team which focuses on conversion of free parent to paid parent.</p></li>
+                <li><p>Discuss and work on the pain point of the user's journey and improve user funnel </p></li>
+                <li><p>Provide parents or teachers better platform to make them pay to access new features </p></li>
+                <li><p>Developed external and internal facing React applications alongside multiple micro-services utilizing the NestJS framework</p></li>
+                <li><p>Working with user stories in an agile / scrum environment</p></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section id="work">
+        <section class="work-item">
+    
+            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">Full stack developer</div>
+            <div class="company">Zenjob GmbH</div>
+            <div class="date">
+              <span class="startDate">Nov 2019</span>
+              <span class="endDate">- Nov 2021</span>
+            </div>
+          </header>
+    
+          <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">Berlin,</span>
+            <span class="countryCode">(Germany)</span>
+          </span>
+          <span class="website">
+            <a target="_blank" href="https://www.zenjob.com/">https://www.zenjob.com/</a>
+          </span>     
+          <ul class="keywords">
+              <li>NodeJs</li>
+              <li>ReactJs</li>
+              <li>NestJs</li>
+              <li>Jest</li>
+              <li>Java (groovy)</li>
+              <li>A/B testing with Unleash</li>
+              <li>Kafka</li>
+              <li>AWS SQS</li>
+              <li>Postgres</li>
+          </ul>  
+          <div class="item" id="work-item">
+            <div class="summary"><p>Zenjob is a platform which enables part-time jobbers to organize their working life freely and provides companies with motivated and flexible employees.</p></div>
+            <ul class="highlights">
+                <li><p>Acted as a full stack JavaScript engineer for the talent acquisition team focused on users journey from Sign up to Onboarding.</p></li>
+                <li><p>Discuss and work on the pain point of the user's journey and improve user funnel </p></li>
+                <li><p>Ensuring our users had a pleasant and digital-first experience</p></li>
+                <li><p>Developed external and internal facing React applications alongside multiple micro-services utilizing the NestJS framework</p></li>
+                <li><p>Working with user stories in an agile / scrum environment</p></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section id="work">
+        <section class="work-item">
+    
+            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">Full stack developer</div>
+            <div class="company">Digital Trons</div>
+            <div class="date">
+              <span class="startDate">May 2016</span>
+              <span class="endDate">- Oct 2019</span>
+            </div>
+          </header>
+    
+          <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">Ahmedabad,</span>
+            <span class="countryCode">(India)</span>
+          </span>
+          <span class="website">
+            <a target="_blank" href="https://www.digitaltrons.com">https://www.digitaltrons.com</a>
+          </span>     
+          <ul class="keywords">
+              <li>NodeJs</li>
+              <li>ReactJs</li>
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>RasberryPi</li>
+              <li>Postgres</li>
+              <li>Mongodb</li>
+          </ul>  
+          <div class="item" id="work-item">
+            <div class="summary"><p>DigitalTrons is a service based company which offers solutions to startups, entrepreneurs, and growing businesses around the world, specialized in the software development.</p></div>
+            <ul class="highlights">
+                <li><p>Gather the requirements from the client during weekly calls</p></li>
+                <li><p>Architecting the project from the scratch and set the weekly goals to deliver</p></li>
+                <li><p>Break it down the bi-weekly deliverables and delegate to the team</p></li>
+                <li><p>Take a ownership of team's achievement and experiences</p></li>
+                <li><p>Manage and deploy different environments of the front end and back end apps</p></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section id="work">
+        <section class="work-item">
+    
+            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+            <label for="work-item-0"></label>
+    
+          <header class="clear">
+            <div class="position">Full stack developer</div>
+            <div class="company">Improwised Technology Pvt. Ltd</div>
+            <div class="date">
+              <span class="startDate">July 2015</span>
+              <span class="endDate">- May 2016</span>
+            </div>
+          </header>
+    
+          <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">Rajkot,</span>
+            <span class="countryCode">(India)</span>
+          </span>
+          <span class="website">
+            <a target="_blank" href="https://www.improwised.com">https://www.improwised.com</a>
+          </span>     
+          <ul class="keywords">
+              <li>NodeJs</li>
+              <li>ReactJs</li>
+              <li>D3.js</li>
+              <li>Laravel</li>
+              <li>Docker</li>
+              <li>Mongodb</li>
+          </ul>  
+          <div class="item" id="work-item">
+            <div class="summary"><p>Improwised also is a service based company which is working toward its goal of empowering its clients with the cutting edge solutions and proficient services..</p></div>
+            <ul class="highlights">
+                <li><p>Get the requirements from client</p></li>
+                <li><p>Set a weekly goals to deliverabls</p></li>
+                <li><p>Coordinate with the team and keep the track of assigned tickets.</p></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="header-left">
+              <div class="studyType">
+                Bachelors in
+              </div>
+              <div class="area">
+                Computer engineering
+              </div>
+              <div class="institution">
+                Atmiya Institute of Science and Technology
+              </div>
+            </div>
+            <div class="date">
+              <span class="startDate">
+              2011
+              </span>
+              <span class="endDate">
+              - 2015
+              </span>
+            </div>
+          </header>
+    
+    
+    
+          <div class="item">
+            <div class='gpa'>
+              <strong> CGPA:</strong> <span>6.93</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency fluent">
+              <em>Fluent</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="display">
+          <h3 class="language">
+            Hindi
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native speaker</em>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+      <header>
+        <h2 class='section-title'>References <span class="item-count">(3)</span></h2>
+      </header>
+      <section class="item">
+        <header>
+            <div class="name">Brendan James</div>
+            <a class="link" target="_blank" href="https://www.linkedin.com/in/brendanjshort/">Head of engineering at Atom Learning</a>
+        </header>
+
+        <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">London,</span>
+            <span class="countryCode">(UK)</span>
+        </span>
+      </section>
+      <br />
+      <section class="item">
+        <header>
+            <div class="name">Matthew Evans-Young</div>
+            <a class="link" target="_blank" href="https://www.linkedin.com/in/matthew-evans-young-76a3a655/">CFO at Atom Learning</a>
+        </header>
+
+        <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">London,</span>
+            <span class="countryCode">(UK)</span>
+        </span>
+      </section>
+      <br />
+    <section class="item">
+        <header>
+            <div class="name">Jaskaran Kahlon</div>
+            <a class="link" target="_blank" href="https://www.linkedin.com/in/jaskarankahlon/">Software Engineer at Atom Learning</a>
+        </header>
+
+        <span class="location">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="city">London,</span>
+            <span class="countryCode">(UK)</span>
+        </span>
+      </section>
+    </section>
+
+  </body>
+</html>

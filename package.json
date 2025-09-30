@@ -1,6 +1,6 @@
 {
   "name": "jaynishb",
-  "version": "4.0.3",
+  "version": "5.0.0",
   "description": "A personal card for Jaynish Buddhdev (@jaynishb)",
   "main": "card.js",
   "bin": {
